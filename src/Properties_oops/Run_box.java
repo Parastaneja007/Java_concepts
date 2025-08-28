@@ -8,12 +8,12 @@ public class Run_box {
 //        Box box4 = new Box(box2);
 //        Box_weight box5 = new Box_weight();
          Box box5 = new Box_weight(12 , 13 , 14 , 18);
-        System.out.println(box5.w);
+//        System.out.println(box5.w);
          // in this box 5 example we have taken object type as box weight but it is refering to
         // box(parent)
         // we are not able to access weight because it is the type of reference variable(here box)
         // not object(here box_weight) which determines that which variable we can access
-        Box_weight box6 = new Box(12 , 13 , 56 , 12);
+//        Box_weight box6 = new Box(12 , 13 , 56 , 12);
         // error in above as we can reference a child to parent
         // some points to clear things
         //1st we can access variables and mreathods of type reference variable
