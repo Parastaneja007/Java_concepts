@@ -14,9 +14,9 @@ public class Run_box {
         // we are not able to access weight because it is the type of reference variable(here box)
         // not object(here box_weight) which determines that which variable we can access
 //        Box_weight box6 = new Box(12 , 13 , 56 , 12);
-        // error in above as we can reference a child to parent
+        // error in above as we can not reference a child to parent
         // some points to clear things
-        //1st we can access variables and mreathods of type reference variable
+        //1st we can access variables and meathods of type reference variable
         // 2nd so here in this error the reference variable is of type box_weight
         // and box_weight only has weight variable but we are calling the constructor of
         // parent class which has no idea about weight
