@@ -1,0 +1,68 @@
+What is an Annotation?
+
+An annotation in Java is a special kind of metadata (tag) that can be added to code elements like classes, methods, variables, parameters, packages etc.
+
+Annotations do not change the actual logic of the program.
+
+They provide information to the compiler, JVM, or frameworks/tools.
+
+They can be used for instructions, documentation, and runtime processing.
+
+Think of annotations as labels or instructions attached to code.
+
+
+Built-in Annotations
+
+Java provides some built-in annotations:
+
+✅ 1. Compiler-level annotations
+
+@Override → ensures method is overriding a superclass method.
+
+@Deprecated → marks method/class as deprecated (compiler warns).
+
+@SuppressWarnings → suppress compiler warnings.
+
+  ✅ 2 meta-annotations (annotations that apply to other annotations)
+
+@Retention → specifies how long the annotation is retained (source, class, or runtime).
+
+@Target → defines where the annotation can be applied (method, field, type, etc.).
+
+@Documented → makes annotation appear in Javadoc.
+
+@Inherited → allows subclass to inherit the annotation from superclass.
+
+
+🔹 Custom Annotations
+
+You can create your own annotations.
+
+
+import java.lang.annotation.*;
+
+@Retention(RetentionPolicy.RUNTIME)   // keep it at runtime
+@Target(ElementType.METHOD)          // can be applied to methods
+@interface MyAnnotation {
+}
+
+🔹 Types of Annotations by Retention
+
+SOURCE → available only in source code, discarded during compilation.
+Example: @Override
+
+CLASS → stored in class file, but not available at runtime.
+Example: some compiler annotations.
+
+RUNTIME → available at runtime via reflection.
+Example: @Deprecated, custom runtime annotations.
+
+🔹 Real-World Uses of Annotations
+
+Spring Framework → @Autowired, @Controller, @Service
+
+Hibernate/JPA → @Entity, @Id, @Table
+
+JUnit/TestNG → @Test, @Before, @After
+
+REST APIs → @GET, @POST, @Path
