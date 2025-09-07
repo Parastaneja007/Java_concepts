@@ -1,0 +1,30 @@
+Why does printing e give a message (not hashcode)?
+
+When you do:
+
+System.out.println(e);
+
+
+Internally, Java calls:
+
+System.out.println(e.toString());
+
+
+And Throwable (the parent of all exceptions) overrides toString() like this:
+
+public String toString() {
+    String s = getClass().getName();
+    String message = getLocalizedMessage();
+    return (message != null) ? (s + ": " + message) : s;
+}
+
+
+So for ArithmeticException: / by zero,
+
+getClass().getName() → "java.lang.ArithmeticException"
+
+getLocalizedMessage() → "/ by zero"
+
+➡️ Result =
+
+java.lang.ArithmeticException: / by zero
