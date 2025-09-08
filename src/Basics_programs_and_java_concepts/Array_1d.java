@@ -1,3 +1,5 @@
+package Basics_programs_and_java_concepts;
+
 import java.util.Arrays;
 import java.util.Scanner;
 public class Array_1d {

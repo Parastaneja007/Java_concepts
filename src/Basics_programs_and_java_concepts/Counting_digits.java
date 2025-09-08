@@ -1,3 +1,5 @@
+package Basics_programs_and_java_concepts;
+
 import java.util.Scanner;
 
 public class Counting_digits {

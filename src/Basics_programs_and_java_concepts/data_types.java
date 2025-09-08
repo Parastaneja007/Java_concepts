@@ -1,3 +1,5 @@
+package Basics_programs_and_java_concepts;
+
 public class data_types {
     public static void main(String[] args) {
         // primitive data types
