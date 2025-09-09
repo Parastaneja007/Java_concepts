@@ -1,5 +1,4 @@
 package Exception_handling;
-
 public class Multiple_catch {
     public static void main(String[] args) {
         try {
@@ -11,6 +10,11 @@ public class Multiple_catch {
         catch(ArrayIndexOutOfBoundsException e){
             System.out.println("Array out of bound");
         }
-
+        catch( java.lang.Exception e){
+            System.out.println("other exception");
+        } finally{
+            System.out.println("this will always execute");
+        }
     }
 }
+

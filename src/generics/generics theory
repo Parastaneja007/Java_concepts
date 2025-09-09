@@ -144,7 +144,7 @@ Sometimes you want to restrict the type parameter.
 Use `extends` keyword.
 
 ```java
-class Calculator<T extends Number> { // Only Number and subclasses allowed
+class Basics_programs_and_java_concepts.Calculator<T extends Number> { // Only Number and subclasses allowed
     public double square(T num) {
         return num.doubleValue() * num.doubleValue();
     }
@@ -152,10 +152,10 @@ class Calculator<T extends Number> { // Only Number and subclasses allowed
 
 public class Main {
     public static void main(String[] args) {
-        Calculator<Integer> c1 = new Calculator<>();
+        Basics_programs_and_java_concepts.Calculator<Integer> c1 = new Basics_programs_and_java_concepts.Calculator<>();
         System.out.println(c1.square(5));
 
-        // Calculator<String> c2 = new Calculator<>(); ❌ Not allowed
+        // Basics_programs_and_java_concepts.Calculator<String> c2 = new Basics_programs_and_java_concepts.Calculator<>(); ❌ Not allowed
     }
 }
 ```
