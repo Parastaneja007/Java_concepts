@@ -6,7 +6,8 @@ public class Main {
         Daughter daughter = new Daughter();
         son.career();
         daughter.college();
-//        Parent p = new Parent(); we can not create object of parent class
+//        Parent p = new Parent();
+//        we can not create object of parent class
         Parent p = new Son(); // but we can create reference like this
     }
 }

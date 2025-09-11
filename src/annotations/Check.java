@@ -7,6 +7,7 @@ import java.lang.reflect.Method;
 public class Check {
     //    @veryImportant // error as it is not a class , it is not applicable to meathods
     @important
+
     // no error as it is also applicable to meathods
     void show() {
         System.out.println("i am meathod with annotation");
