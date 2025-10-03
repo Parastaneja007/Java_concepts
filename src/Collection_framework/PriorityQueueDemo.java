@@ -15,7 +15,7 @@ public class PriorityQueueDemo {
         pq.add(20);
         System.out.println(pq); // not sorted
         while(!pq.isEmpty()){
-            System.out.println(pq.poll()); // sorted 
+            System.out.println(pq.poll()); // sorted
         }
     }
 }
