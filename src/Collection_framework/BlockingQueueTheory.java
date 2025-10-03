@@ -15,7 +15,7 @@ public class BlockingQueueTheory {
            // put -> blocks if  the queue is full until space is available
            // take -> blocks if the queue is empty until element becomes available
            // offer -> wait for the space become available , upto specified timeout
-        BlockingQueue<Integer> bq = new ArrayBlockingQueue<>();// a bounded , blocking queue backed by
+        BlockingQueue<Integer> bq = new ArrayBlockingQueue<>(5);// a bounded , blocking queue backed by
         // an array
     }
 }
