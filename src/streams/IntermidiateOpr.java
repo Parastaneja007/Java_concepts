@@ -33,5 +33,18 @@ public class IntermidiateOpr {
         // 7 . peek
         //performs an action on each element as it is consumed
         Stream.iterate(1 , x-> x+1 ).skip(10).limit(100).peek(System.out ::println).count();
+        // 8 . flatMap
+        // handles streams of collections , lists or arrays where each element is itself a collection
+        // flatten nested structure ( eg lists within lists ) so that they can be processed as a single
+        // sequence of element
+        // transform and flatten element at the same time ...
+        List<List<String>> listsoflists = Arrays.asList(
+                Arrays.asList("mango", "banana"),
+                Arrays.asList("apple", "orange"),
+                Arrays.asList("grapes", "kiwi ")
+        );
+        System.out.println(listsoflists.get(1).get(0));
+        System.out.println(listsoflists.stream().flatMap(x -> x.stream()).map(String::toUpperCase).toList());
+
     }
 }
