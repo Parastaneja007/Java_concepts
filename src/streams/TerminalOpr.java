@@ -1,6 +1,7 @@
 package streams;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -28,6 +29,11 @@ public class TerminalOpr {
         // 6 . findFirst , findAny
         System.out.println(list.stream().findFirst().get()); // returns the first element
         System.out.println(list.stream().findAny().get()); // returns any element
+        // 7 . toArray()
+        Object[] array = Stream.of(1, 2, 3).toArray();
+         // 8 . min / max
+        System.out.println("max " + Stream.of(2 , 7 , 85 , 4).max(Comparator.naturalOrder()).get());
+        System.out.println("min " + Stream.of(2 , 7 , 85 , 4).min(Comparator.naturalOrder()).get());
         // example - filtering and collecting names
         List<String> names = Arrays.asList("Anna", "Bob", "Charlie", "David");
         Stream<String> lengthFind = names.stream().filter(x -> x.length() > 3);
