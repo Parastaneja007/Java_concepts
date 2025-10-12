@@ -1,5 +1,6 @@
 package streams;
 
+import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
@@ -34,11 +35,17 @@ public class TerminalOpr {
          // 8 . min / max
         System.out.println("max " + Stream.of(2 , 7 , 85 , 4).max(Comparator.naturalOrder()).get());
         System.out.println("min " + Stream.of(2 , 7 , 85 , 4).min(Comparator.naturalOrder()).get());
+        // 9 forEachOrdered
+        List<Integer> nums = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9);
+        System.out.println("using for each with parallel streams ");
+        nums.parallelStream().forEach(System.out::println);
+        System.out.println("Using forEachOrdered with parallel stream ");
+        nums.parallelStream().forEachOrdered(System.out::println);
         // example - filtering and collecting names
         List<String> names = Arrays.asList("Anna", "Bob", "Charlie", "David");
         Stream<String> lengthFind = names.stream().filter(x -> x.length() > 3);
-        List<String> finalNmaes = lengthFind.toList();
-        System.out.println(finalNmaes);
+        List<String> finalNamaes = lengthFind.toList();
+        System.out.println(finalNamaes);
         // example -- squaring and sorting numbers
         List<Integer> list1 = Arrays.asList(5, 2, 9, 1, 6);
           System.out.println(list1.stream().map(x -> x * x ).sorted().toList());
@@ -52,5 +59,10 @@ public class TerminalOpr {
         // stateful and stateless operation
         // in stateful operation , it should know about all the element before executing like sorting
         // in stateless operation , it works on a single element which is needed currently ...
+        Stream<String> stream = names.stream();
+        stream.forEach(System.out::println); // here terminal operation has been called ..
+        //strings can not be reused after a terminal operation
+//        List<String> reuse = stream.map(String::toUpperCase).toList();// exception
+//        System.out.println(reuse);
     }
 }
