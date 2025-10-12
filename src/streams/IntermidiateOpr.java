@@ -23,12 +23,15 @@ public class IntermidiateOpr {
         // 4 . distinct -- for unique value -- eliminate two words which are same
         Stream<String> distinct = list.stream().distinct();
         // 5 . limit
-       Stream.iterate(1 , x-> x+1 ).count(); // this will generate a infinite loop so we can
+//       Stream.iterate(1 , x-> x+1 ).count(); // this will generate a infinite loop so we can
         //put limit for particular number we want it to run
         Stream.iterate(1 , x-> x+1 ).limit(100);
         // 6 . skip
         Stream.iterate(1 , x-> x+1 ).skip(10).limit(100);
         // used to skip some things , in above first 10 are skiped , it will start from 11 and go till
         // 110 because limit is 100
+        // 7 . peek
+        //performs an action on each element as it is consumed
+        Stream.iterate(1 , x-> x+1 ).skip(10).limit(100).peek(System.out ::println).count();
     }
 }
