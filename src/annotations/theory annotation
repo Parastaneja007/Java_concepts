@@ -63,6 +63,6 @@ Spring Framework → @Autowired, @Controller, @Service
 
 Hibernate/JPA → @Entity, @Id, @Table
 
-JUnit/TestNG → @Test, @Before, @After
+JUnit/TestNG → @Basics_programs_and_java_concepts.Test, @Before, @After
 
 REST APIs → @GET, @POST, @Path

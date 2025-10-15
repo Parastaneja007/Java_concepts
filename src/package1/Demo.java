@@ -20,7 +20,7 @@ public class Demo {
             e.printStackTrace();
         }
 
-        System.out.println("Main method finished");
+        System.out.println("Basics_programs_and_java_concepts.Main method finished");
     }
 
     @Override

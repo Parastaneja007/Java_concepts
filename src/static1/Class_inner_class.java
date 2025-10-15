@@ -21,7 +21,7 @@ public class Class_inner_class {
 //        }
 //    }
     public static void main(String[] args) {
-        // create objects of Test directly
+        // create objects of Basics_programs_and_java_concepts.Test directly
         Inner_class a = new  Inner_class("paras");
         Inner_class b = new  Inner_class("parv");
         // it will show error because the inner_class depend on its outside class but

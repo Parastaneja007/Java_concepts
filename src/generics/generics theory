@@ -60,7 +60,7 @@ class Box<T> {   // T is a type parameter
     }
 }
 
-public class Main {
+public class Basics_programs_and_java_concepts.Main {
     public static void main(String[] args) {
         Box<String> b1 = new Box<>();
         b1.set("Hello");
@@ -97,7 +97,7 @@ class Utils {
     }
 }
 
-public class Main {
+public class Basics_programs_and_java_concepts.Main {
     public static void main(String[] args) {
         String[] names = {"A", "B", "C"};
         Integer[] numbers = {1, 2, 3};
@@ -128,7 +128,7 @@ class Pair<K, V> {
     public V getValue() { return value; }
 }
 
-public class Main {
+public class Basics_programs_and_java_concepts.Main {
     public static void main(String[] args) {
         Pair<String, Integer> p1 = new Pair<>("Age", 20);
         System.out.println(p1.getKey() + " : " + p1.getValue());
@@ -150,7 +150,7 @@ class Basics_programs_and_java_concepts.Calculator<T extends Number> { // Only N
     }
 }
 
-public class Main {
+public class Basics_programs_and_java_concepts.Main {
     public static void main(String[] args) {
         Basics_programs_and_java_concepts.Calculator<Integer> c1 = new Basics_programs_and_java_concepts.Calculator<>();
         System.out.println(c1.square(5));
@@ -188,7 +188,7 @@ Wildcards are useful when you don’t know the exact type.
        for (Number num : list) {
            total += num.doubleValue();
        }
-       System.out.println("Sum: " + total);
+       System.out.println("Basics_programs_and_java_concepts.Sum: " + total);
    }
    ```
 
